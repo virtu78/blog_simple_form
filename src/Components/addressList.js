@@ -1,20 +1,26 @@
 import React, { Component, PropTypes } from 'react';
 import * as ons from 'react-onsenui';
+const fontStyle = {
+  fontSize: '24px',
+   fontFamily: 'helvetica, arial, sans-serif',
+  fontWeight: 300
+};
+
+
 export default class AddressList extends Component {
 renderAddress(a, i) {
 return (
-<ons.ListItem key={`address-${i}`} tappable style={{color: this.props.fontColor}}>
+<ons.ListItem key={`address-${i}`} tappable 
+onClick={() => this.props.showPost() }
+
+>
 <ons.Row>
 <ons.Col>
 <div className="timeline-from">
-<div className="timeline-name">{a.description}</div>
-<div className="timeline-id">{a.street}</div>
+<div style={fontStyle}>{a.description}</div>
+<div style={fontStyle}>{a.street}</div>
 </div>
-<ons.Button
-style={{ float: 'right', padding: '0 12px', marginRight: 5 }}
-onClick={() => this.props.onDelete(a) }>
-<i className='fa fa-trash'></i>
-</ons.Button>
+
 </ons.Col>
 </ons.Row>
 </ons.ListItem>
@@ -23,7 +29,7 @@ onClick={() => this.props.onDelete(a) }>
 render() {
 return (
 <ons.List
-renderHeader={() => <ons.ListHeader style={{color: this.props.fontColor}}>Посты</ons.ListHeader>}
+renderHeader={() => <ons.ListHeader style={fontStyle}>Посты</ons.ListHeader>}
 renderRow={::this.renderAddress}
 dataSource={this.props.items} />
 )
