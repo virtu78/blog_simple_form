@@ -19,14 +19,10 @@ return (
 <section style={{textAlign: 'center'}}>
 <AddressList
 items={this.props.profile.addresses}
- 
 fontColor={this.props.settings.bgFontColor}
-showPost={(a) => this.props.changePage(FavoritesPage)
+showPost={(a) => this.props.changePage(FavoritesPage)}
 
-}
-
-
- />
+/>
 </section>
 )
 
@@ -48,7 +44,7 @@ return (
 <ons.Page>
 {::this.renderAddressesForm()}
 {::this.renderAddresses()}
-console.log(a)
+
 </ons.Page>
 );
 }

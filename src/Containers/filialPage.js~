@@ -19,14 +19,10 @@ return (
 <section style={{textAlign: 'center'}}>
 <AddressList
 items={this.props.profile.addresses}
- 
 fontColor={this.props.settings.bgFontColor}
-showPost={(a) => this.props.changePage(FavoritesPage)
+showPost={(a) => this.props.changePage(FavoritesPage)}
 
-}
-
-
- />
+/>
 </section>
 )
 
@@ -36,7 +32,7 @@ return (
 <section style={{textAlign: 'center', marginBottom: 10}}>
 <AddressForm
 onSubmit={(m) => this.props.addAddress(m.description,  m.street)}
-
+{console.log(this.props.a)}
  />
 
 </section>
@@ -48,6 +44,7 @@ return (
 <ons.Page>
 {::this.renderAddressesForm()}
 {::this.renderAddresses()}
+
 </ons.Page>
 );
 }

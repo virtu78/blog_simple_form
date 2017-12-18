@@ -12,7 +12,7 @@ renderAddress(a, i) {
 return (
 <ons.ListItem key={`address-${i}`} tappable 
 onClick={() => this.props.showPost() }
-onClick={() => this.props.onShow() }
+onClick={() => this.props.getPost() }
 >
 <ons.Row>
 <ons.Col>
