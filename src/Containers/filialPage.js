@@ -21,7 +21,11 @@ return (
 items={this.props.profile.addresses}
  
 fontColor={this.props.settings.bgFontColor}
-showPost={(a) => this.props.changePage(FavoritesPage)}
+showPost={(a) => this.props.changePage(FavoritesPage)
+
+}
+
+
  />
 </section>
 )
@@ -34,14 +38,17 @@ return (
 onSubmit={(m) => this.props.addAddress(m.description,  m.street)}
 
  />
+
 </section>
 )
 }
 render() {
 return (
+
 <ons.Page>
 {::this.renderAddressesForm()}
 {::this.renderAddresses()}
+console.log(a)
 </ons.Page>
 );
 }

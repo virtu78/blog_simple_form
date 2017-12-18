@@ -32,10 +32,17 @@ return (
 <section style={{textAlign: 'center' }}>
 <Post
 items={this.props.profile.addresses}
-
-
-
- />
+onDelete={(a) =>
+Ons.notification.confirm({
+title: 'Удаление',
+message: 'Вы уверены?',
+buttonLabels: ["Нет", "Да"],
+callback: (i) => {
+if(i === 1)
+this.props.deleteAddress(a.id)
+}
+})
+} />
 </section>
 )
 }

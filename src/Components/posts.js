@@ -1,5 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import * as ons from 'react-onsenui';
+
 const fontStyle = {
   fontSize: '24px',
    fontFamily: 'helvetica, arial, sans-serif',
@@ -11,15 +12,21 @@ export default class Post extends Component {
 renderPost(a, i) {
 
 return (
-<ons.List key={`address-${i}`} tappable >
+<ons.List key={`address-${i}`} tappable 
+ >
 
 <ons.Row>
 <ons.Col>
 <div >
 <div style={fontStyle}>{a.description}</div>
 <div style={fontStyle}>{a.street}</div>
-</div>
 
+</div>
+<ons.Button
+style={{ float: 'right', padding: '0 12px',	marginRight: 5 }}
+onClick={() => this.props.onDelete(a) }>
+<i className='fa fa-trash'></i>
+</ons.Button>
 </ons.Col>
 </ons.Row>
 </ons.List>

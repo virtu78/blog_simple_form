@@ -29,8 +29,8 @@ canSubmit: false
 }
 submit(model) {
 this.props.onSubmit(model);
- console.log(this.props.addresses);
- console.log(this.props.id);
+ 
+ 
 }
 render() {
 return (
@@ -51,11 +51,7 @@ onChange={(e) => this.setState({ street: e.target.value })}
 placeholder='Содержание поста ...'
  required/>
 
-<p  style={{position: 'relative',
-    right: '0px',
-    width: '300px',
-    padding: '10px',
-backgrounColor: 'red'}} >
+<p   >
 <button className="button" 
 disabled={!this.state.canSubmit}
 >

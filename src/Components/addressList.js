@@ -20,7 +20,6 @@ onClick={() => this.props.showPost() }
 <div style={fontStyle}>{a.description}</div>
 <div style={fontStyle}>{a.street}</div>
 </div>
-
 </ons.Col>
 </ons.Row>
 </ons.ListItem>

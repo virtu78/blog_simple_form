@@ -51,11 +51,7 @@ onChange={(e) => this.setState({ street: e.target.value })}
 placeholder='Содержание поста ...'
  required/>
 
-<p  style={{position: 'absolute',
-    right: '0px',
-    width: '300px',
-    padding: '10px',
-backgrounColor: 'red'}} >
+<p   >
 <button className="button" 
 disabled={!this.state.canSubmit}
 >
