@@ -12,7 +12,7 @@ export default class AddressList extends Component {
 				onClick={() => this.props.showPost() } >
 				<ons.Row>
 					<ons.Col>
-						<div className="timeline-from">
+						<div className='timeline-from'>
 							<div style={fontStyle}>{a.description}</div>
 							<div style={fontStyle}>{a.street}</div>
 						</div>

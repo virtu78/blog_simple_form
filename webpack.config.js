@@ -16,13 +16,21 @@ module.exports = {
 	
     module: {
         rules: [
+   			{
+        		enforce: "pre",
+        		test: /\.js$/,
+        		exclude: /node_modules/,
+        		loader: "eslint-loader",
+      		},
+
+
             {
 				test: /\.js$/,
                 include: [
                     path.join(__dirname, "src")
                 ],
-                loader: 'babel-loader',
-                query: {
+				loader: "babel-loader",
+                 query: {
                     cacheDirectory: true,
                     presets: [ 'es2015', 'stage-0', 'react' ],
 					plugins: ['transform-react-constant-elements']

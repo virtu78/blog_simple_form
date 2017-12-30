@@ -1,6 +1,4 @@
-import React, { Component, PropTypes } from 'react';
-import { bindActionCreators } from 'redux';
-import { connect } from 'react-redux';
+import React, { Component} from 'react';
 import * as ons from 'react-onsenui';
 
 const tableStyle = {

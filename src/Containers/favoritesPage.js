@@ -1,4 +1,4 @@
-import React, { Component, PropTypes } from 'react'
+import React, { Component } from 'react'
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import * as ons from 'react-onsenui';
@@ -32,7 +32,7 @@ class FavoritesPage extends Component {
 						Ons.notification.confirm({
 							title: 'Удаление',
 							message: 'Вы уверены?',
-							buttonLabels: ["Нет", "Да"],
+							buttonLabels: ['Нет', 'Да'],
 							callback: (i) => {
 								if(i === 1)
 								this.props.deleteAddress(a.id)

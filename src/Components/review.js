@@ -1,6 +1,5 @@
 import React, { Component, PropTypes } from 'react';
 import { getImageUrl } from '../utils/product';
-import * as ons from 'react-onsenui';
 import Reviews from './reviews';
 import md5 from 'md5';
 
@@ -8,8 +7,8 @@ export default class Review extends Component {
 	renderStars() {
 		return (
             <span className="review__stars">
-            	{[1, 2, 3, 4, 5].map((i) => 
-            		<i key={i} className={`fa fa-star${i > this.props.review.rate ? '-o' : ''}`}></i>)}
+            {[1, 2, 3, 4, 5].map((i) => 
+            <i key={i} className={`fa fa-star${i > this.props.review.rate ? '-o' : ''}`}></i>)}
             </span>
         )
 	}

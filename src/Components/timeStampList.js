@@ -4,7 +4,7 @@ import moment from 'moment';
 
 export default class TimeStampList extends Component {
 	getTimeStamps(endTimeString) {
-		var out = document.getElementById('out');
+		
 
 		var startTime = moment().add(1, 'hour').startOf('hour');
 		var endTime = moment(endTimeString, 'HH:mm');

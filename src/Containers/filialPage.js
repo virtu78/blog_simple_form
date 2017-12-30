@@ -1,11 +1,8 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux';
 import * as ons from 'react-onsenui';
-import * as Ons from 'onsenui';
-import Formsy from 'formsy-react';
 import { deleteAddress, addAddress } from '../Actions/profile';
-import { ValidationInput, ValidationTextarea} from '../Components/validationInput';
 import FavoritesPage from './favoritesPage';
 import AddressList from '../Components/addressList';
 import AddressForm from '../Components/addressForm';
@@ -16,7 +13,7 @@ class ProfilePage extends Component {
 				<AddressList
 					items={this.props.profile.addresses}
 					fontColor={this.props.settings.bgFontColor}
-					showPost={(a) => this.props.changePage(FavoritesPage)}/>
+					showPost={() => this.props.changePage(FavoritesPage)}/>
 			</section>
 		)
 	}
@@ -37,7 +34,7 @@ class ProfilePage extends Component {
 			</ons.Page>
 		);
 	}
-};
+}
 function mapStateToProps (state) {
 	return state
 }
