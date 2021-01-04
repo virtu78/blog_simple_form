@@ -32,7 +32,7 @@
     "webpack-dev-server": "~2.4.5"
   },
   "dependencies": {
-    "axios": "~0.16.1",
+    "axios": "~0.21.1",
     "formsy-react": "~0.19.2",
     "md5": "^2.2.1",
     "moment": "~2.18.1",
