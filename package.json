@@ -35,7 +35,7 @@
     "axios": "~0.16.1",
     "formsy-react": "~0.19.2",
     "md5": "^2.2.1",
-    "moment": "~2.18.1",
+    "moment": "~2.29.2",
     "onsenui": "^2.4.0",
     "react": "~15.5.4",
     "react-addons-css-transition-group": "~15.5.2",
